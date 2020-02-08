@@ -4,7 +4,8 @@
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  height: 20px;
+  margin-left: 10px;
 }
 
 .App-header {
@@ -53,5 +54,5 @@ tr {
 }
 
 .card {
-  width: 18rem;
+  width: 45ex;
 }

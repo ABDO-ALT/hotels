@@ -24,3 +24,7 @@ body {
 .search-row input {
   margin-right: 10px;
 }
+
+.row-selected {
+  background-color: rgb(179, 214, 211);
+}
