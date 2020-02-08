@@ -4,11 +4,17 @@ class Restaurant extends React.Component {
   constructor() {
     super();
     this.state = {
-      orders: 0
+      orders: 0,
+      happy: true
     };
   }
   addOrder = () => {
-    console.log("Add Order");
+    this.setState(previousState => {
+      return {
+        orders: previousState.orders + 1,
+        happy: !previousState.happy
+      };
+    });
   };
   render() {
     return (
@@ -16,7 +22,7 @@ class Restaurant extends React.Component {
         <h3>Restaurant Orders</h3>
         <ul>
           <li>
-            Pizzas: {this.state.orders}{" "}
+            {this.state.happy ? "Happy" : "Unhappy"} Pizzas: {this.state.orders}{" "}
             <RestaurantButton onClick={this.addOrder} />
           </li>
         </ul>
