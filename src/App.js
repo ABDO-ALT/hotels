@@ -4,6 +4,7 @@ import Heading from "./components/Heading";
 import Bookings from "./components/Bookings";
 import TouristInfoCards from "./components/TouristInfoCards";
 import Footer from "./components/Footer";
+import Restaurant from "././components/Restaurant.js";
 
 const App = () => {
   const footerData = [
@@ -15,6 +16,7 @@ const App = () => {
     <div className="App">
       <Heading />
       <Bookings />
+      <Restaurant />
       <hr />
       <TouristInfoCards />
       <hr />
