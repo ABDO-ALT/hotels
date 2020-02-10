@@ -2,12 +2,14 @@ import React from "react";
 import SearchButton from "./SearchButton";
 
 class Search extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      searchInput: "",
-      value: ""
+      searchInput: ""
     };
+  }
+  handleSearchInput(event) {
+    this.setState({ searchInput: event.target.value });
   }
 
   render() {
@@ -22,12 +24,15 @@ class Search extends React.Component {
               <label htmlFor="customerName">Customer name</label>
               <div className="search-row">
                 <input
+                  onChange={event => this.handleSearchInput(event)}
                   type="text"
                   id="customerName"
                   className="form-control"
                   placeholder="Customer Id"
                 />
-                <SearchButton />
+
+                <button className="btn btn-primary">Search IDs</button>
+                {/* <SearchButton /> */}
               </div>
             </form>
           </div>
