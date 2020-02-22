@@ -20,7 +20,13 @@ class Search extends React.Component {
         </div>
         <div className="row search-wrapper">
           <div className="col">
-            <form className="form-group search-box">
+            <form
+              className="form-group search-box"
+              onSubmit={event => {
+                event.preventDefault();
+                this.props.search(this.state.searchInput);
+              }}
+            >
               <label htmlFor="customerName">Customer name</label>
               <div className="search-row">
                 <input
@@ -30,8 +36,12 @@ class Search extends React.Component {
                   className="form-control"
                   placeholder="Customer Id"
                 />
+                <input
+                  type="submit"
+                  value="Search IDs"
+                  className="btn btn-primary"
+                />
 
-                <button className="btn btn-primary">Search IDs</button>
                 {/* <SearchButton /> */}
               </div>
             </form>

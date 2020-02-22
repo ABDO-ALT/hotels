@@ -19,7 +19,10 @@ function RowResult(props) {
       <td>{result.checkInDate}</td>
       <td>{result.checkOutDate}</td>
       <td>{staying}</td>
-      <button onClick={props.onSelect}>select</button>
+      <td>
+        {" "}
+        <button onClick={props.onSelect}>select</button>{" "}
+      </td>
     </tr>
   );
 }
