@@ -10,8 +10,10 @@ class Bookings extends React.Component {
     };
   }
   componentDidMount() {
-    fetch("https://cyf-react.glitch.me/").then(response => {
+    fetch("http://localhost:5000/bookings").then(response => {
       response.json().then(results => {
+        console.log(results);
+
         this.setState({ fakeBookings: results });
       });
     });
